@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Santarém</title>
+    <meta name="author" content="Joana Gonçalves">
+    <meta name="description" content="Website sobre Santarém">
+    <meta name="keywords" content="Ribatejo, Escalabitano, Capital do Gótico">
+    <style>
+      body {
+        background-color: rgb(216, 205, 191);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      /* Estilo das imagens */
+      img {
+        border: 5px solid #38980b;
+        padding: 5px;
+      }
+      /* Estilo do cabeçalho */
+      header {
+        text-align: center;
+        background-color: #f9f9f9;
+        padding: 20px;
+      }
+      /* Estilo da navegação */
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #38980b;
+        padding: 10px;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      /* Estilo do conteúdo principal */
+      main {
+        background-color: #f9f9f9;
+        padding: 20px;
+        text-align: center;
+      }
+      h2 {
+        margin-top: 0;
+      }
+      p {
+        margin: 30px auto;
+        max-width: 800px;
+        line-height: 1.5;
+      }
+      /* Estilo do rodapé */
+      footer {
+        background-color: #f9f9f9;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+      }
+      
+    </style>
+</head>
+
+<body>
+  <header>
+  &nbsp;
+  <h1>Santarém</h1>
+  <img src="imagem/campinos.jpg" alt="Santarém">
+  <br>
+</header>
+<nav>
+  <p>
+    <b><a href="index.html">😏Introdução</a></b>
+    <a href="local.html">🐒Localização</a>
+    <a href="multimedia.html">🎶Multimedia</a>
+    <a href="quizz.html">😘Quizz</a>
+    <a href="info.html">😎Informação</a>
+  </p>
+</nav>
+<main>
+    <h3>Quizz</h3>
+    <p>Neste quizz vais descobrir se conheces a cidade!</p>
+    <nav><fieldset>Mostra que conheces Santarém</fieldset></nav>
+    <fieldset>
+            <h1>info</h1>
+        <fieldset><placeholder>Nome:<input type="text" maxlength="50">
+        </label></placeholder></fieldset>
+        <fieldset><placeholder>Apelido:<input type="text"></placeholder></fieldset>
+        <fieldset><placeholder>email:<input type="text"></placeholder></fieldset>
+    </fieldset>
+
+    <fieldset>
+        <h1>Perguntas:</h1>
+        <!DOCTYPE html>
+
+    <form method="POST" action="mailto:seuemail@gmail.com" enctype="multipart/form-data">
+      
+      <!-- Pergunta 1 -->
+      <label for="text">1. Qual é o rio que passa por Santarém?</label>
+      <option value="">Rio...</option>
+      <br>
+      <input type="text" id="pergunta1" name="pergunta1" size="50" pattern="[a-zA-Z]+" required>
+      
+      <br><br>
+      
+      <!-- Pergunta 2 -->
+      <label for="pergunta2">2. Qual é a igreja mais antiga de Santarém?</label>
+      <datalist id="pergunta2" name="pergunta2" required>
+        <option value="">-- Selecione uma opção --</option>
+        <option value="Igreja de Santa Maria da Graça">Igreja de Santa Maria da Graça</option>
+        <option value="Igreja de São João de Alporão">Igreja de São João de Alporão</option>
+        <option value="Igreja de Nossa Senhora da Piedade">Igreja de Nossa Senhora da Piedade</option>
+      </datalist>
+      
+      <br><br>
+      
+      <!-- Pergunta 3 -->
+      <label for="radio">3. Qual é a festa mais famosa de Santarém?</label>
+      <br>
+      <input type="radio" id="pergunta3a" name="pergunta3" value="Festa da Sardinha" required>
+      <label for="pergunta3a">Festa da Sardinha</label>
+      <br>
+      <input type="radio" id="pergunta3b" name="pergunta3" value="Feira Nacional de Agricultura" required>
+      <label for="pergunta3b">Feira Nacional de Agricultura</label>
+      <br>
+      <input type="radio" id="pergunta3c" name="pergunta3" value="Festa do Vinho" required>
+      <label for="pergunta3c">Festa do Vinho</label>
+      
+      <br><br>
+      
+      <!-- Pergunta 4 -->
+      <label for="checkbox">4. Qual é o prato típico de Santarém?</label>
+      <br>
+      <input type="checkbox" id="pergunta4a" name="pergunta4" value="Sopa da Pedra">
+      <label for="pergunta4a">Sopa da Pedra</label>
+      <br>
+      <input type="checkbox" id="pergunta4b" name="pergunta4" value="Cozido à Portuguesa">
+      <label for="pergunta4b">Cozido à Portuguesa</label>
+      <br>
+      <input type="checkbox" id="pergunta4c" name="pergunta4" value="Frango de Churrasco">
+      <label for="pergunta4c">Frango de Churrasco</label>
+      
+      
+      
+    <!-- Pergunta 5 -->
+<label>
+    <p>5. Qual é o nome deste monumento histórico em Santarém?</p>
+    <img src="imagem/Torre das Cabaças..jpg" alt="Foto de um monumento histórico em Santarém"><br>
+    <input type="radio" name="resposta" value="castelo">
+    Castelo de Santarém
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="resposta" value="catedral" autofocus>
+    Catedral de Santarém
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="resposta" value="torre">
+    Torre das Cabaças
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="resposta" value="portas">
+    Portas do Sol
+  </label>
+  <br>
+
+  
+  <br><br>
+      <!-- Pergunta 6 -->
+      <label for="pergunta6">6. Qual é o principal evento cultural que ocorre em Santarém todos os anos?
+        <select name="evento-principal" required>
+        <option value="">Selecione uma opção</option>
+        <option value="Feira Nacional de Agricultura">Feira Nacional de Agricultura</option>
+        <option value="Festival Nacional de Gastronomia">Festival Nacional de Gastronomia</option>
+        <option value="Festa de São José">Festa de São José</option>
+        </select></label>
+      
+      <br><br>
+
+      <!-- Pergunta 7 -->
+      <label for="date">7. Qual é a data da fundação de Santarém?
+        <input type="date" name="data-fundacao" autocomplete="off" required>
+        </select></label>
+      
+      <br><br>
+      <!-- Pergunta 8 -->
+      <label for="pergunta6">8. Qual é a cor predominante da bandeira de Santarém?
+        <label>
+          <input type="radio" name="resposta" value="vermelho"> <a style="color:red">Vermelho</a>
+         
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="verde" style="color:green"><a style="color:green">Verde</a>
+          
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="azul" ><a style="color:blue">Azul</a>
+          
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="amarelo" ><a style="color:yellow">Amarelo</a>
+        
+        </label>
+        <label>
+          <input type="radio" name="resposta" value="outra">
+          Outra
+        </label>
+        <label>
+          <p>           Se a resposta for "outra", selecione a cor:  <input type="color" name="outra_cor"></p>
+        </label>
+     <br>
+      <!-- Pergunta 9 -->
+      <label for="number">9.Quantos castelos históricos existem na cidade de Santarém?
+        <label>  <option value="">Digite o número:</option> <input type="number" name="outra_resposta">
+        </label>
+        
+      <br><br>
+
+       <!-- Pergunta 10 -->
+       <label for="range"><p>10. Em que ano foi fundada a cidade de Santarém?<input type="range" name="outra_resposta" min="1100" max="1300" step="1" value="1180">
+    <span id="range-value">1180</span>
+  </label>
+  
+  <script>
+    var range = document.querySelector('input[type="range"]');
+    var rangeValue = document.getElementById('range-value');
+  
+    range.addEventListener('input', function() {rangeValue.textContent = this.value;});
+  </script>
+        <br><br>
+
+  <label for="comentario">Deixa aqui um comentário sobre Santarém:</label>
+  <textarea id="comentario" name="comentario" rows="5" cols="40"></textarea>
+  <br><br>
+
+  <input type="submit" value="Enviar">
+  <form method="POST" action="mailto: jjoanagoncalves.13@gmail.com" enctype="multipart/form-data"></form>
+    </fieldset>
+  </main>
+
+    <footer>nome : Joana Gonçalves / numero : a22107603 / Universidade Lusófona / 2ºano</footer>
+
+</body>
+
+</html>
