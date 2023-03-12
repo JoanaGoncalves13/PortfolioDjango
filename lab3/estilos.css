@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.capitais {
+    display: flex;
+    Flex-flow: row wrap;
+    /* caixas dispostas em linha e fazendo quebra de linha se necessário */
+    justify-content: space-around;
+    /* espaça horizontalmente os items entre si de forma igual */
+    align-items: space-around;
+    /* espaça vericalmente os items entre si de forma igual */
+    background-color: rgb(238, 248, 248);
+    padding: 30px;
+}
+
+.capitais>div {
+    /* este selector identifica todos os elementos div “filhos” do elemento com classe capitais */
+    display: flex;
+    justify-content: space-around;
+    /* espaça os items de forma igual */
+    border-radius: 20px;
+    /* arredonda os cantos */
+    box-shadow: 5px 5px 15px #888888;
+    /* cria sombra */
+    margin: 10px;
+    /* garante um espaçamento mínimo entre elementos */
+}
+
+.capitais img {
+    /* este selector identifica todas as imagens dentro do elemento com classe capitais:
+(elementos imagem dentro de elemento com classe capitais) */
+    border-radius: 20px 0 0 20px;
+    /* arredonda 1º canto (superior à esq.) e 4º canto */
+    height: 100%;
+}
+
+.capitais div div:last-child {
+    /* este selector identifica os divs com o parágrafo com nome da capital
+(ultimo div filho de cada div dentro do elemento com classe capitais) */
+
+    width: 100px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 0 20px 20px 0;
+    /* arredonda 2º e 3º canto */
+
+    /* para centrar nome da capital na caixa (horizontal e vertical) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{background-color: rgb(97, 147, 97);}
+
+* {
+    font-family: 'Lora', serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(233, 138, 138);
+}
+
+.p3 {
+    color: rgb(14, 64, 130);
+    font-size: large;
+
+}
+
+.div4 {
+    background-color: rgb(238, 248, 248);
+    color: rgb(41, 69, 179);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.h {
+    align-items: center;
+    color: rgb(45, 111, 187);
+}
+
+.p2 {
+    align-items: center;
+    color: rgb(233, 250, 255);
+    font-size: 6rem;
+}
+
+img {
+    width: 100%
+}
+
+.p1 {
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    color: rgb(233, 138, 138);
+    font-size: 2rem;
+}
+
+.div2 {
+    position: relative;
+}
+
+@keyframes bounce {
+    80% {
+        -webkit-transform: translate(-10px);
+        transform: translateY(-20px);
+    }
+}
+
+.efeito {
+    background-color: antiquewhite;
+}
+
+.efeito:hover {
+    animation: bounce 1s;
+}
+
+.container {
+    position: relative;
+    height: 150px;
+}
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url("default.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.asia {
+    transform: translate(-150px, -150px);
+}
+
+.europa {
+    transform: translate(150px, -150px);
+}
+
+.america {
+    transform: translate(-150px, 150px);
+}
+
+.africa {
+    transform: translate(150px, 150px);
+}
+
+.center {
+    background-color: rgb(238, 248, 248);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center h1 {
+    margin: 0;
+}
+
+.center p {
+    margin: 20px 0;
+}
+
+.continent-options {
+    display: flex;
+    justify-content: center;
+    color: black;
+
+}
+
+
+.continent-options button {
+    color: black;
+
+    /* este selector identifica todos os elementos div “filhos” do elemento com classe capitais */
+    display: flex;
+    justify-content: space-around;
+    /* espaça os items de forma igual */
+    border-radius: 20px;
+    /* arredonda os cantos */
+    box-shadow: 5px 5px 15px #888888;
+    /* cria sombra */
+    margin: 10px;
+    /* garante um espaçamento mínimo entre elementos */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 0cm;
+    cursor: pointer;
+}
+
+.continent-options button:hover {
+    animation: bounce 1s;
+    background-color: rgb(23, 148, 226);
+    color: #fff;
+}
+.container2 {
+    border: 0cap;
+    background-image: url(imagens/space.gif);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+}
+.container3 {
+    border: 0cap;
+    background-color: rgb(238, 248, 248) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+}
+header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  nav a:hover {
+    background-color: #eee;
+    font-weight: bold;
+  }
+  
+
+.circle {
+    width: 170px;
+    height: 170px;
+background-color: cornflowerblue;    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.circle2 {
+    width: 200px;
+    height: 200px;
+    background-image: url(imagens/ali-yalniz-world-is-spinning.gif);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.circle2 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.circle img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.circle2:hover img {
+    opacity: 1;
+}
+
+.circle2 span {
+    position: absolute;
+    opacity: 1;
+}
+
+.circle:hover img {
+    opacity: 1;
+}
+
+.circle span {
+    position: absolute;
+    opacity: 1;
+}
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
