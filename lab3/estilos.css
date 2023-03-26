@@ -58,6 +58,8 @@
     margin: 0;
 }
 
+
+
 .div1 {
     display: flex;
     justify-content: center;
@@ -108,6 +110,35 @@ img {
 
 .div2 {
     position: relative;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    grid-gap: 0px;
+    padding: 0px;
+}
+
+.grid-item {
+    background-color: #e7ecff;
+    border: 1px solid #bfbfbf;
+    padding: 0px;
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
 
 @keyframes bounce {

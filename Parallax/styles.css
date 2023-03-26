@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Define o efeito de paralaxe */
+.parallax {
+    background-image: url("https://images.unsplash.com/photo-1518717758536-85ae29035b6d");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Define o texto que será mostrado na imagem de fundo */
+.parallax h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* Define o estilo para as imagens que serão colocadas sobre o fundo */
+.girls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 5000px;
+    padding: 10px 0;
+    position: relative;
+    z-index: 4;
+}
+
+.girls img {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    object-fit: cover;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease-out;
+}
+
+.girls img:hover {
+    transform: scale(1.1);
+}
+
+/* Define o estilo para a seção seguinte, que contém uma breve descrição das imagens */
+.description {
+    background-color: #f8f8f8;
+    padding: 50px;
+    text-align: center;
+}
+
+.description h2 {
+    margin-top: 0;
+    font-size: 36px;
+}
+
+.description p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    min-height: 100vh;
+    background: #0c192c;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: 30px ;
+    left: 5%;
+    align-items: center;
+    flex-wrap: wrap;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container a{
+    background-color: #0c192c;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #ff2d75;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #ffff;
+    -webkit-box-reflect: below 0px linear-gradient (transparent, rgba(126, 0, 244, 0.41)) ;
+    transition: 0.5s;
+    transition-delay: 0s;
+
+}
+.container a:hover{
+    transition-delay: 1.5s;
+    color:#0c192c;
+    box-shadow: 0 0 10px #ff2d75,  0 0 20px #ff2d75 , 
+                0 0 40px #ff2d75,  0 0 50px #ff2d75
+    
+}
+.container a span{
+    position: relative;
+    z-index: 100;
+}
+
+.container a::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px ;
+    background: #ff2d75;
+    box-shadow: 5px -8px 0 #ff2d75,
+                5px 8px 0 #ff2d75;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay:  1s, 0.5s, 0s,0s;
+
+}
+
+.container a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #ff2d75, 5px 0 0 #ff2d75;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+
+}
+
+.container a::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px ;
+    background: #ff2d75;
+    box-shadow: -5px 8px 0 #ff2d75,
+                -5px -8px 0 #ff2d75;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay:  1s, 0.5s, 0s,0s;
+
+}
+
+.container a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: 0px;
+    box-shadow: 5px 0 0 #ff2d75, 5px 0 0 #ff2d75;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+
+}
+
+
+<<<<<<< HEAD
+.container2{
+    display: flex;
+    justify-content: 30px ;
+    left: 20%;
+    align-items: center;
+    flex-wrap: wrap;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container2 a{
+    background-color: #0c192c;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #2df1ff;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #ffff;
+    -webkit-box-reflect: below 0px linear-gradient (transparent, rgba(0, 61, 244, 0.41)) ;
+    transition: 0.5s;
+    transition-delay: 0s;
+
+}
+.container2 a:hover{
+    transition-delay: 1.5s;
+    color:#0c192c;
+    box-shadow: 0 0 10px #2dffff,  0 0 20px #2df4ff , 
+                0 0 40px #2deaff,  0 0 50px #2deaff
+    
+}
+.container2 a span{
+    position: relative;
+    z-index: 100;
+}
+
+.container2 a::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px ;
+    background: #2df4ff;
+    box-shadow: 5px -8px 0 #2dfff8,
+                5px 8px 0 #2df1ff;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay:  1s, 0.5s, 0s,0s;
+
+}
+
+.container2 a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #2ddfff, 5px 0 0 #2deaff;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+
+}
+
+.container2 a::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px ;
+    background: #2df8ff;
+    box-shadow: -5px 8px 0 #2df8ff,
+                -5px -8px 0 #2dd8ff;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay:  1s, 0.5s, 0s,0s;
+
+}
+
+.container2 a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: 0px;
+    box-shadow: 5px 0 0 #2df8ff, 5px 0 0 #ff2d75;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+
+}
+
+
+
+
+
+
+.container3{
+    display: flex;
+    justify-content: 30px ;
+    left: 60%;
+    align-items: center;
+    flex-wrap: wrap;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container3 a{
+    background-color: #0c192c;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #2df1ff;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #ffff;
+    -webkit-box-reflect: below 0px linear-gradient (transparent, rgba(0, 61, 244, 0.41)) ;
+    transition: 0.5s;
+    transition-delay: 0s;
+
+}
+.container3 a:hover{
+    transition-delay: 1.5s;
+    color:#0c192c;
+    box-shadow: 0 0 10px #2dffff,  0 0 20px #2df4ff , 
+                0 0 40px #2deaff,  0 0 50px #2deaff
+    
+}
+.container3 a span{
+    position: relative;
+    z-index: 100;
+}
+
+.container3 a::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px ;
+    background: #2df4ff;
+    box-shadow: 5px -8px 0 #2dfff8,
+                5px 8px 0 #2df1ff;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay:  1s, 0.5s, 0s,0s;
+
+}
+
+.container3 a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #2ddfff, 5px 0 0 #2deaff;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+
+}
+
+.container3 a::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px ;
+    background: #2df8ff;
+    box-shadow: -5px 8px 0 #2df8ff,
+                -5px -8px 0 #2dd8ff;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay:  1s, 0.5s, 0s,0s;
+
+}
+
+.container3 a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: 0px;
+    box-shadow: 5px 0 0 #2df8ff, 5px 0 0 #2ddcff;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+
+}
+
+
+
+
+.container4{
+    display: flex;
+    justify-content: 30px ;
+    left: 45%;
+    align-items: center;
+    flex-wrap: wrap;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container4 a{
+    background-color: #0c192c;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #ff2d96;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #ffff;
+    -webkit-box-reflect: below 0px linear-gradient (transparent, rgba(0, 61, 244, 0.41)) ;
+    transition: 0.5s;
+    transition-delay: 0s;
+
+}
+.container4 a:hover{
+    transition-delay: 1.5s;
+    color:#0c192c;
+    box-shadow: 0 0 10px #ff2d92,  0 0 20px #ff2d73 , 
+                0 0 40px #ff2d84,  0 0 50px #ff2d84
+    
+}
+.container4 a span{
+    position: relative;
+    z-index: 100;
+}
+
+.container4 a::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px ;
+    background: #ff2d7d;
+    box-shadow: 5px -8px 0 #ff2d7d,
+                5px 8px 0 #ff2d7a;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay:  1s, 0.5s, 0s,0s;
+
+}
+
+.container4 a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #ff2d8b, 5px 0 0 #ff2d8b;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+
+}
+
+.container4 a::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px ;
+    background: #ff2d99;
+    box-shadow: -5px 8px 0 #ff2d96,
+                -5px -8px 0 #ff2d81;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay:  1s, 0.5s, 0s,0s;
+
+}
+
+.container4 a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: 0px;
+    box-shadow: 5px 0 0 #ff2d8f, 5px 0 0 #ff2d75;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+
+}
+
+
+
+
+
+
+
+=======
+>>>>>>> parent of 02af546 (ig)
+.bolasNeon{
+    position:fixed;
+    display:flex;
+    
+}
+.bolasNeon span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc2dc44,  0 0 50px #4fc3dc,  0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(150s/var(--i));
+
+}
+
+.bolasNeon span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,  0 0 50px #ff2d75,  0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0%
+    {
+       transform: translateY(100vh) scale(0); 
+    }
+    100%
+    {
+       transform: translateY(5vh) scale(0.7); 
+    }
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.button {
+    padding: 20px;
+    margin: 10px;
+    background-color: #5491dc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-image: url;
+}
