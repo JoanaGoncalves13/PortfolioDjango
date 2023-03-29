@@ -5,6 +5,389 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+@media(max-width:600px) {
+
+
+    body{
+    min-height: 100vh;
+    background: #f6f6f6;
+    justify-content: center;
+    align-items: center;
+}
+    .container{
+        display: flex;
+        left: 50%;
+        top: 0%;
+        flex-wrap: wrap;
+        position:fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .container a{
+        background-color: #0c192c;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        border: 2px solid #ff2d75;
+        margin: 40px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: 2px;
+        color: #ffff;
+        -webkit-box-reflect: below 0px linear-gradient (transparent, rgba(126, 0, 244, 0.41)) ;
+        transition: 0.5s;
+        transition-delay: 0s;
+    
+    }
+    .container a:hover{
+        transition-delay: 1.5s;
+        color:#0c192c;
+        box-shadow: 0 0 10px #ff2d75,  0 0 20px #ff2d75 , 
+                    0 0 40px #ff2d75,  0 0 50px #ff2d75
+        
+    }
+    .container a span{
+        position: relative;
+        z-index: 100;
+    }
+    
+    .container a::before{
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 2px ;
+        background: #ff2d75;
+        box-shadow: 5px -8px 0 #ff2d75,
+                    5px 8px 0 #ff2d75;
+        transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+        transition-delay:  1s, 0.5s, 0s,0s;
+    
+    }
+    
+    .container a:hover::before{
+        width: 60%;
+        height: 100%;
+        left: -2px;
+        box-shadow: 5px 0 0 #ff2d75, 5px 0 0 #ff2d75;
+        transition-delay: 0s, 0.5s, 1s, 1s;
+    
+    }
+    
+    .container a::after{
+        content: '';
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 2px ;
+        background: #ff2d75;
+        box-shadow: -5px 8px 0 #ff2d75,
+                    -5px -8px 0 #ff2d75;
+        transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+        transition-delay:  1s, 0.5s, 0s,0s;
+    
+    }
+    
+    .container a:hover::after{
+        width: 60%;
+        height: 100%;
+        right: 0px;
+        box-shadow: 5px 0 0 #ff2d75, 5px 0 0 #ff2d75;
+        transition-delay: 0s, 0.5s, 1s, 1s;
+    
+    }
+    
+    
+    
+    .container2{
+        display: flex;
+        justify-content: 30px ;
+        left: 37%;
+        align-items: center;
+        flex-wrap: wrap;
+        position:fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .container2 a{
+        background-color: #0c192c;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        border: 2px solid #2df1ff;
+        margin: 40px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: 2px;
+        color: #ffff;
+        -webkit-box-reflect: below 0px linear-gradient (transparent, rgba(0, 61, 244, 0.41)) ;
+        transition: 0.5s;
+        transition-delay: 0s;
+    
+    }
+    .container2 a:hover{
+        transition-delay: 1.5s;
+        color:#0c192c;
+        box-shadow: 0 0 10px #2dffff,  0 0 20px #2df4ff , 
+                    0 0 40px #2deaff,  0 0 50px #2deaff
+        
+    }
+    .container2 a span{
+        position: relative;
+        z-index: 100;
+    }
+    
+    .container2 a::before{
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 2px ;
+        background: #2df4ff;
+        box-shadow: 5px -8px 0 #2dfff8,
+                    5px 8px 0 #2df1ff;
+        transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+        transition-delay:  1s, 0.5s, 0s,0s;
+    
+    }
+    
+    .container2 a:hover::before{
+        width: 60%;
+        height: 100%;
+        left: -2px;
+        box-shadow: 5px 0 0 #2ddfff, 5px 0 0 #2deaff;
+        transition-delay: 0s, 0.5s, 1s, 1s;
+    
+    }
+    
+    .container2 a::after{
+        content: '';
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 2px ;
+        background: #2df8ff;
+        box-shadow: -5px 8px 0 #2df8ff,
+                    -5px -8px 0 #2dd8ff;
+        transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+        transition-delay:  1s, 0.5s, 0s,0s;
+    
+    }
+    
+    .container2 a:hover::after{
+        width: 60%;
+        height: 100%;
+        right: 0px;
+        box-shadow: 5px 0 0 #2df8ff, 5px 0 0 #ff2d75;
+        transition-delay: 0s, 0.5s, 1s, 1s;
+    
+    }
+    
+    
+    
+    
+    
+    
+    .container3{
+        display: flex;
+        justify-content: 30px ;
+        left: 70%;
+        align-items: center;
+        flex-wrap: wrap;
+        position:fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .container3 a{
+        background-color: #0c192c;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        border: 2px solid #2df4ff;
+        margin: 40px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: 2px;
+        color: #ffff;
+        -webkit-box-reflect: below 0px linear-gradient (transparent, rgba(0, 61, 244, 0.41)) ;
+        transition: 0.5s;
+        transition-delay: 0s;
+    
+    }
+    .container3 a:hover{
+        transition-delay: 1.5s;
+        color:#0c192c;
+        box-shadow: 0 0 10px #2df1ff,  0 0 20px #2df1ff , 
+                    0 0 40px #2dedff,  0 0 50px #2ddcff
+        
+    }
+    .container3 a span{
+        position: relative;
+        z-index: 100;
+    }
+    
+    .container3 a::before{
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 2px ;
+        background: #2dedff;
+        box-shadow: 5px -8px 0 #2dc0ff,
+                    5px 8px 0 #2dfbff;
+        transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+        transition-delay:  1s, 0.5s, 0s,0s;
+    
+    }
+    
+    .container3 a:hover::before{
+        width: 60%;
+        height: 100%;
+        left: -2px;
+        box-shadow: 5px 0 0 #2dfffb, 5px 0 0 #2dd1ff;
+        transition-delay: 0s, 0.5s, 1s, 1s;
+    
+    }
+    
+    .container3 a::after{
+        content: '';
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 2px ;
+        background: #2de3ff;
+        box-shadow: -5px 8px 0 #2de3ff,
+                    -5px -8px 0 #2dd5ff;
+        transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+        transition-delay:  1s, 0.5s, 0s,0s;
+    
+    }
+    
+    .container3 a:hover::after{
+        width: 60%;
+        height: 100%;
+        right: 0px;
+        box-shadow: 5px 0 0 #2ddfff, 5px 0 0 #2dd5ff;
+        transition-delay: 0s, 0.5s, 1s, 1s;
+    
+    }
+    
+    
+    
+    .container4{
+        display: flex;
+        justify-content: 30px ;
+        left: 54%;
+        align-items: center;
+        flex-wrap: wrap;
+        position:fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .container4 a{
+        background-color: #0c192c;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        border: 2px solid #ff2d96;
+        margin: 40px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: 2px;
+        color: #ffff;
+        -webkit-box-reflect: below 0px linear-gradient (transparent, rgba(0, 61, 244, 0.41)) ;
+        transition: 0.5s;
+        transition-delay: 0s;
+    
+    }
+    .container4 a:hover{
+        transition-delay: 1.5s;
+        color:#0c192c;
+        box-shadow: 0 0 10px #ff2d92,  0 0 20px #ff2d73 , 
+                    0 0 40px #ff2d84,  0 0 50px #ff2d84
+        
+    }
+    .container4 a span{
+        position: relative;
+        z-index: 100;
+    }
+    
+    .container4 a::before{
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 2px ;
+        background: #ff2d7d;
+        box-shadow: 5px -8px 0 #ff2d7d,
+                    5px 8px 0 #ff2d7a;
+        transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+        transition-delay:  1s, 0.5s, 0s,0s;
+    
+    }
+    
+    .container4 a:hover::before{
+        width: 60%;
+        height: 100%;
+        left: -2px;
+        box-shadow: 5px 0 0 #ff2d8b, 5px 0 0 #ff2d8b;
+        transition-delay: 0s, 0.5s, 1s, 1s;
+    
+    }
+    
+    .container4 a::after{
+        content: '';
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 2px ;
+        background: #ff2d99;
+        box-shadow: -5px 8px 0 #ff2d96,
+                    -5px -8px 0 #ff2d81;
+        transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+        transition-delay:  1s, 0.5s, 0s,0s;
+    
+    }
+    
+    .container4 a:hover::after{
+        width: 60%;
+        height: 100%;
+        right: 0px;
+        box-shadow: 5px 0 0 #ff2d8f, 5px 0 0 #ff2d75;
+        transition-delay: 0s, 0.5s, 1s, 1s;
+    
+    }
+    
+    
+}
+
+
+
+
 body{
     min-height: 100vh;
     background: #0c192c;
@@ -15,10 +398,10 @@ body{
 .container{
     display: flex;
     justify-content: 30px ;
-    left: 5%;
+    left: 20%;
     align-items: center;
     flex-wrap: wrap;
-    position:absolute;
+    position:fixed;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -103,14 +486,14 @@ body{
 }
 
 
-<<<<<<< HEAD
+
 .container2{
     display: flex;
     justify-content: 30px ;
-    left: 20%;
+    left: 37%;
     align-items: center;
     flex-wrap: wrap;
-    position:absolute;
+    position:fixed;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -202,10 +585,10 @@ body{
 .container3{
     display: flex;
     justify-content: 30px ;
-    left: 60%;
+    left: 70%;
     align-items: center;
     flex-wrap: wrap;
-    position:absolute;
+    position:fixed;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -215,7 +598,7 @@ body{
     position: relative;
     display: inline-block;
     padding: 15px 30px;
-    border: 2px solid #2df1ff;
+    border: 2px solid #2df4ff;
     margin: 40px;
     text-transform: uppercase;
     font-weight: 600;
@@ -230,8 +613,8 @@ body{
 .container3 a:hover{
     transition-delay: 1.5s;
     color:#0c192c;
-    box-shadow: 0 0 10px #2dffff,  0 0 20px #2df4ff , 
-                0 0 40px #2deaff,  0 0 50px #2deaff
+    box-shadow: 0 0 10px #2df1ff,  0 0 20px #2df1ff , 
+                0 0 40px #2dedff,  0 0 50px #2ddcff
     
 }
 .container3 a span{
@@ -247,9 +630,9 @@ body{
     transform: translateY(-50%);
     width: 20px;
     height: 2px ;
-    background: #2df4ff;
-    box-shadow: 5px -8px 0 #2dfff8,
-                5px 8px 0 #2df1ff;
+    background: #2dedff;
+    box-shadow: 5px -8px 0 #2dc0ff,
+                5px 8px 0 #2dfbff;
     transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
     transition-delay:  1s, 0.5s, 0s,0s;
 
@@ -259,7 +642,7 @@ body{
     width: 60%;
     height: 100%;
     left: -2px;
-    box-shadow: 5px 0 0 #2ddfff, 5px 0 0 #2deaff;
+    box-shadow: 5px 0 0 #2dfffb, 5px 0 0 #2dd1ff;
     transition-delay: 0s, 0.5s, 1s, 1s;
 
 }
@@ -272,9 +655,9 @@ body{
     transform: translateY(-50%);
     width: 20px;
     height: 2px ;
-    background: #2df8ff;
-    box-shadow: -5px 8px 0 #2df8ff,
-                -5px -8px 0 #2dd8ff;
+    background: #2de3ff;
+    box-shadow: -5px 8px 0 #2de3ff,
+                -5px -8px 0 #2dd5ff;
     transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
     transition-delay:  1s, 0.5s, 0s,0s;
 
@@ -284,21 +667,20 @@ body{
     width: 60%;
     height: 100%;
     right: 0px;
-    box-shadow: 5px 0 0 #2df8ff, 5px 0 0 #2ddcff;
+    box-shadow: 5px 0 0 #2ddfff, 5px 0 0 #2dd5ff;
     transition-delay: 0s, 0.5s, 1s, 1s;
 
 }
 
 
 
-
 .container4{
     display: flex;
     justify-content: 30px ;
-    left: 45%;
+    left: 54%;
     align-items: center;
     flex-wrap: wrap;
-    position:absolute;
+    position:fixed;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -384,12 +766,6 @@ body{
 
 
 
-
-
-
-
-=======
->>>>>>> parent of 02af546 (ig)
 .bolasNeon{
     position:fixed;
     display:flex;
