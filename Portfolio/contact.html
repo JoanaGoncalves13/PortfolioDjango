@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacta me</title>
+    <link rel="stylesheet" href="styleContact.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+        <b><div class="nome">Joana<b>.</b></div></b>
+        <ul class="navItems">
+          <li><a href="heroPage.html">Página principal</a></li>
+          <li><a href="AboutMe.html">Sobre mim</a></li>
+          <li><a href="projects.html">Projetos</a></li>
+          <li><a href="PW.html">Programação Web</a></li>
+          <li><a href="webSite.html">Javascript Playground</a></li>             
+        </ul>
+    </nav>
+    <div class="container">
+        
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Vamos conversar</h3>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            dolorum adipisci recusandae praesentium dicta!
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>Salvaterra de Magos, Santarém</p>
+            </div>
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>jjoanagoncalves.13@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="img/phone.png" class="icon" alt="" />
+              <p>966361410</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Segue-me :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="heroPage.html" autocomplete="off">
+            <h3 class="title"></h3>
+            <div class="input-container">
+              <input id="nome" type="text" name="name" class="input" />
+              <label for="">Nome</label>
+              <span>Nome</span>
+            </div>
+            <div class="input-container">
+              <input id="email" type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input id="tele" type="tel" name="phone" class="input" />
+              <label for="">Telefone</label>
+              <span>Telefone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea id="mensagem" name="message" class="input"></textarea>
+              <label for="">Mensagem</label>
+              <span>Mensagem</span>
+            </div>
+            <input id="btn" type="submit" value="Enviar" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
+    <script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', function(e){
+            e.preventDeFault()
+            var name = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var tele = document.getElementById('tele').value;
+            var mensagem = document.getElementById('mensagem').value;
+            var body= 'nome: ' + name + '<br/> email: '+ email + '<br/> telefone: '+ tele + '<br/> mensagem: '+ mensagem;
+
+            Email.send({
+                Host: "smtp.gmail.com",
+                Nome: "jjoanagoncalves.13@gmail.com",
+                Password: "password",
+                To: "jjoanagoncalves.13@gmail.com",
+                From:email,
+                Subject: Nome,
+                Body: body
+            }).then(
+                message=>alert(message)
+            );
+        })
+    </script>
+  </body>
+</html>

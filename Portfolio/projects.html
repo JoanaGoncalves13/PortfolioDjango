@@ -1,0 +1,160 @@
+<html lang="pt">
+    <head>
+    <meta charset="UTF_8">
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>    <link rel="stylesheet" href="styleProjects.css">
+    <title>Portfólio Digital!</title>
+</head>
+<body>
+    <div class = "container">
+        <nav>
+            <div class="nome">Joana<b>.</b></div>
+            <ul class="navItems">
+              <li><a href="heroPage.html">Página principal</a></li>
+              <li><a href="AboutMe.html">Sobre mim</a></li>
+              <li><a href="projects.html">Projetos</a></li>
+              <li><a href="PW.html">Programação Web</a></li>
+              <li><a href="webSite.html">Javascript Playground</a></li>                 
+            </ul>
+
+            
+        </nav>
+      
+        
+        <h1>Os meus projetos</h1>
+
+        <div class="container1">
+          
+        <div class="card">
+          <div class="content">
+            <h2>01</h2>
+            <h3>Minesweeper</h3>
+            <p>Minesweeper é um jogo de computador que requer estratégia e habilidade para descobrir e marcar todas as minas em um campo minado sem detonar nenhuma delas.</p>
+            <a href="">descobre mais</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>02</h2>
+            <h3>DeisiJungle</h3>
+            <p>É um jogo de tabuleiro com animais, em que todos os jogadoreslançam um dado e conforme a sorte vencem ou perdem o jogo, nem todos podemos comer o que queremos nem ter a energia do mundo</p>
+            <a href="">descobre mais</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>03</h2>
+            <h3>Chave codigo</h3>
+            <p>É um projeto desenvolvido na cadeira de arquitetura de computadores, através do arduino. A finalidade do mesmo é fazer um cadeado para a segurança</p>
+            <a href="">descobre mais</a>
+          </div>
+        </div>
+      </div>
+      
+            
+      <script type="text/javascript" src="vanilla-tilt.js"></script>
+      <script>
+        VanillaTilt.init(document.querySelectorAll(".card"),{
+          max:25,
+          speed: 400,
+          glare: true,
+          "max-glare":1,
+        });
+      </script>
+           
+
+           
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+ <div class="circle"></div>
+   </div>
+   <script>
+       const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+ "#E6F5FF",
+ "#CCEBFF",
+ "#B2E0FF",
+ "#99D6FF",
+ "#7FCBFF",
+ "#66C1FF",
+ "#4CB6FF",
+ "#32ACFF",
+ "#19A1FF",
+ "#0087E6",
+ "#0077CC",
+ "#0066B3",
+ "#005999",
+ "#004D80",
+ "#004266",
+ "#00384D",
+ "#002E33",
+ "#002419",
+ "#001A00",
+ "#001200",
+ "#000D00",
+ "#000800"
+];
+
+circles.forEach(function (circle, index) {
+ circle.x = 0;
+ circle.y = 0;
+ circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+ coords.x = e.clientX;
+ coords.y = e.clientY;
+ 
+});
+
+function animateCircles() {
+ 
+ let x = coords.x;
+ let y = coords.y;
+ 
+ circles.forEach(function (circle, index) {
+   circle.style.left = x - 12 + "px";
+   circle.style.top = y - 12 + "px";
+   
+   circle.style.scale = (circles.length - index) / circles.length;
+   
+   circle.x = x;
+   circle.y = y;
+
+   const nextCircle = circles[index + 1] || circles[0];
+   x += (nextCircle.x - x) * 0.3;
+   y += (nextCircle.y - y) * 0.3;
+ });
+
+ requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+
+   </script>
+
+            </div> 
+            
+            </body>
+            </html>

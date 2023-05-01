@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+    <meta charset="UTF_8">
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>    <link rel="stylesheet" href="styleHP.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Portfólio Digital!</title>
+</head>
+<body>
+
+    <div class = "container">    
+        <nav>
+          <div id="data"></div>
+
+            <div class="nome">Joana<b>.</b></div>
+            <ul class="navItems">
+              <li><a href="heroPage.html">Página principal</a></li>
+                <li><a href="AboutMe.html">Sobre mim</a></li>
+                <li><a href="projects.html">Projetos</a></li>
+                <li><a href="PW.html">Programação Web</a></li>
+                <li><a href="webSite.html">Javascript Playground</a></li>      
+                <div class="bx bx-moon" id="darkmode"></div>         
+            </ul>
+        </nav>
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topline">Olá!</span>
+                <h1>O meu nome é <span class="multiText"></span></h1>
+                <p>Sou aluna da Licenciatura de Engenharia Informática na Universidade Lusófona de Lisboa</p>
+                <div class="btns">
+                    <a href="imagens/Currículo [365].pdf" download>
+                    <button>Descarregar CV</button></a>
+                    <a href="contact.html">
+                    <button>Vamos Conversar</button></a>
+                </div>
+            </div>
+            <div class="cols cols1">
+                <div class="imgbox">
+                    <img src="imagens/WhatsApp_Image_2023-04-27_at_00.35.13-removebg-preview (2).png">
+                </div>
+            </div>
+            <div class="bolhas">
+                <div class="cols cols0">
+            </div>
+        </div>
+        <script>
+  
+  let darkmode = document.querySelector("#darkmode");
+  
+  darkmode.onclick = () => {
+    if (darkmode.classList.contains("bx-moon")) {
+      darkmode.classList.replace("bx-moon", "bx-sun");
+      document.body.classList.add("active");
+    } else {
+      darkmode.classList.replace("bx-sun", "bx-moon");
+      document.body.classList.remove("active");
+    }
+  };
+
+const darkModeBtn = document.getElementById("darkmode");
+const body = document.querySelector("body");
+
+darkModeBtn.addEventListener("click", () => {
+  body.classList.toggle("invert-colors");
+});
+
+  </script>   
+
+        <script>var dataAtual = new Date();
+          var opcoesData = { day: 'numeric', month: 'long', year: 'numeric' };
+          var dataFormatada = dataAtual.toLocaleDateString('pt-BR', opcoesData);
+          document.getElementById("data").innerHTML = dataFormatada;</script>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typingEffect = new Typed(".multiText",{
+                strings:["Joana Gonçalves"],
+                loop : true,
+                typeSpeed : 100,
+                backSpeed : 80, 
+                backDelay : 1500
+            })
+        </script>
+          <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+    </div>
+    <script>
+        const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+  "#E6F5FF",
+  "#CCEBFF",
+  "#B2E0FF",
+  "#99D6FF",
+  "#7FCBFF",
+  "#66C1FF",
+  "#4CB6FF",
+  "#32ACFF",
+  "#19A1FF",
+  "#0087E6",
+  "#0077CC",
+  "#0066B3",
+  "#005999",
+  "#004D80",
+  "#004266",
+  "#00384D",
+  "#002E33",
+  "#002419",
+  "#001A00",
+  "#001200",
+  "#000D00",
+  "#000800"
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+  
+});
+
+function animateCircles() {
+  
+  let x = coords.x;
+  let y = coords.y;
+  
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
+    
+    circle.style.scale = (circles.length - index) / circles.length;
+    
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+ 
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+
+
+    </script>
+</body>
+</html>

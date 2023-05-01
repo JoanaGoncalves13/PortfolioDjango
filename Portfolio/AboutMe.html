@@ -1,0 +1,185 @@
+<html lang="pt">
+    <head>
+    <meta charset="UTF_8">
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>    <link rel="stylesheet" href="styleAboutME.css">
+    <title>Portfólio Digital!</title>
+</head>
+<body>
+    
+    <div class = "container">
+       
+        <nav>
+            <div class="nome">Joana<b>.</b></div>
+            <ul class="navItems">
+              <li><a href="heroPage.html">Página principal</a></li>
+              <li><a href="AboutMe.html">Sobre mim</a></li>
+              <li><a href="projects.html">Projetos</a></li>
+              <li><a href="PW.html">Programação Web</a></li>
+              <li><a href="webSite.html">Javascript Playground</a></li>               
+            </ul>
+            </nav>
+           
+            
+	</header>
+	<main>
+		<section>
+			<h2>Licenciatura</h2>
+			<p>Ainda estou a realizar a minha licenciatura <em>engenharia Informática</em>, na Universidade Lusófona em <em>Lisboa</em>.</p>
+		</section>
+		<section>
+			<h2>Cadeiras</h2>
+				<p>Fundamento de Programação | Física | linguagens </p>
+		</section>
+		<section>
+			<h2>Educação</h2>
+			<p>Frequentei o curso de Ciencias e Tecnologias no ensino secundário</p>
+		</section>
+		<section>
+			<h2>Escolas</h2>
+				<p>Escola básica e secundária de Salvaterra de Magos</p>
+		</section>
+		<section>
+			<h2>Aptidões e competências</h2>
+            <h3>Pessoais</h3>
+                <p>Boa capacidade de comunicação e trabalho em equipe</p>
+                <p>Flexibilidade e adaptabilidade</p>
+                <p>Proatividade e resiliência</p>
+                <p>Capacidade de liderança e gestão de projetos</p>
+            <h3>Técnicas</h3>
+                <p>Conhecimento avançado em HTML, CSS e JavaScript</p>
+                <p>Experiência com frameworks como React e Vue.js</p>
+                <p>Conhecimentos em design gráfico e UX/UI</p>
+                <p>Conhecimento em linguagens de programação como Python e Java</p>
+            <h3>Organizacionais</h3>
+                <p>Capacidade de planejamento e gestão de projetos</p>
+                <p>Capacidade de análise e resolução de problemas</p>
+                <p>Conhecimento em metodologias ágeis como Scrum e Kanban</p>
+            <h3>Sociais</h3>
+        
+                <p>Empatia e capacidade de lidar com pessoas de diferentes backgrounds</p>
+                <p>Capacidade de negociação e persuasão</p>
+                <p>Capacidade de trabalho em equipe e colaboração</p>
+            
+            <h3>Linguísticas</h3>
+            
+                <p>Fluência em português, inglês e espanhol</p>
+           
+		</section>
+		<section>
+			<h2>Interesses e hobbies</h2>
+                <p>Além do crescimento profissional, tenho alguns interesses e hobbies que me mantém motivada e feliz:
+                  Como viajar, tirar fotografias e sair com amigos
+                </p>
+                
+            
+               
+            </section>
+            <section>
+ <h2>Experiência profissional</h2>
+                <ul><li>Ainda sem experiência profissional, a qual pretendo alcançar este ano 🐒</li>
+                </ul>
+                <div class="bolhas">
+                  <div class="cols cols0">
+              </div>
+            </section>
+            <div class="copyright">
+              <a style="color:#fff" href="heroPage.html">Página principal | </a><a style="color: #fff;" href="contact.html">Contacta-me</a> | Joana Gonçalves | 2023 | Universidade Lusófona  </div>
+
+          
+            <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+    </div>
+    <script>
+        const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+"#E6F5FF",
+  "#CCEBFF",
+  "#B2E0FF",
+  "#99D6FF",
+  "#7FCBFF",
+  "#66C1FF",
+  "#4CB6FF",
+  "#32ACFF",
+  "#19A1FF",
+  "#0087E6",
+  "#0077CC",
+  "#0066B3",
+  "#005999",
+  "#004D80",
+  "#004266",
+  "#00384D",
+  "#002E33",
+  "#002419",
+  "#001A00",
+  "#001200",
+  "#000D00",
+  "#000800"
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+  
+});
+
+function animateCircles() {
+  
+  let x = coords.x;
+  let y = coords.y;
+  
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
+    
+    circle.style.scale = (circles.length - index) / circles.length;
+    
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+ 
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+
+    </script>
+
+
+            </div> 
+            
+
+            </body>
+            </html>
