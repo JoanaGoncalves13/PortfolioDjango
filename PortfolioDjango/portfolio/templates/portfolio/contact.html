@@ -1,3 +1,7 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/styleContact.css' %}">
+
+
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -19,11 +23,11 @@
           <li><a href="AboutMe.html">Sobre mim</a></li>
           <li><a href="projects.html">Projetos</a></li>
           <li><a href="PW.html">Programação Web</a></li>
-          <li><a href="webSite.html">Javascript Playground</a></li>             
+          <li><a href="webSite.html">Javascript Playground</a></li>
         </ul>
     </nav>
     <div class="container">
-        
+
       <span class="big-circle"></span>
       <img src="img/shape.png" class="square" alt="" />
       <div class="form">
@@ -102,7 +106,7 @@
 
     <script src="app.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    
+
     <script>
         var btn = document.getElementById('btn');
         btn.addEventListener('click', function(e){

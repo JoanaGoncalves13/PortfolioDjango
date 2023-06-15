@@ -1,9 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/styleJS.css' %}">
+
+
+
 <html lang="pt">
     <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script
     src="https://kit.fontawesome.com/64d58efce2.js"
     crossorigin="anonymous"
@@ -15,12 +20,14 @@
         <nav>
             <div class="nome">Joana<b>.</b></div>
             <ul class="navItems">
-              <li><a href="heroPage.html">Página principal</a></li>
-              <li><a href="AboutMe.html">Sobre mim</a></li>
-              <li><a href="projects.html">Projetos</a></li>
-              <li><a href="PW.html">Programação Web</a></li>
-              <li><a href="webSite.html">Javascript Playground</a></li>             
-            </ul>
+        <li><a href="{% url 'portfolio:home' %}">Home</a></li>
+        <li><a href="{% url 'portfolio:formacao' %}">Formação</a></li>
+        <li><a href="{% url 'portfolio:projetos' %}">Projetos</a></li>
+        <li><a href="{% url 'portfolio:competencias' %}">Competencias</a></li>
+        <li><a href="{% url 'portfolio:layout' %}">JavaScript</a></li>
+        <li><a href="{% url 'portfolio:blog' %}">Blog</a></li>
+
+      </ul>
             </nav>
               <div class="calculator dark">
                   <div class="theme-toggler active">
@@ -124,20 +131,20 @@ circles.forEach(function (circle, index) {
 window.addEventListener("mousemove", function(e){
   coords.x = e.clientX;
   coords.y = e.clientY;
-  
+
 });
 
 function animateCircles() {
-  
+
   let x = coords.x;
   let y = coords.y;
-  
+
   circles.forEach(function (circle, index) {
     circle.style.left = x - 12 + "px";
     circle.style.top = y - 12 + "px";
-    
+
     circle.style.scale = (circles.length - index) / circles.length;
-    
+
     circle.x = x;
     circle.y = y;
 
@@ -145,13 +152,13 @@ function animateCircles() {
     x += (nextCircle.x - x) * 0.3;
     y += (nextCircle.y - y) * 0.3;
   });
- 
+
   requestAnimationFrame(animateCircles);
 }
 
 animateCircles();
 
     </script>
-            </div> 
+            </div>
             </body>
             </html>

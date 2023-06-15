@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/styleAboutME.css' %}">
+
 <html lang="pt">
 
 <head>
@@ -16,12 +19,13 @@
     <nav>
       <div class="nome">Joana<b>.</b></div>
       <ul class="navItems">
-        <li><a href="heroPage.html">Página principal</a></li>
-        <li><a href="AboutMe.html">Sobre mim</a></li>
-        <li><a href="projects.html">Projetos</a></li>
-        <li><a href="PW.html">Programação Web</a></li>
-        <li><a href="webSite.html">Javascript Playground</a></li>
-      </ul>
+         <li><a href="{% url 'portfolio:home' %}">Home</a></li>
+        <li><a href="{% url 'portfolio:formacao' %}">Formação</a></li>
+        <li><a href="{% url 'portfolio:projetos' %}">Projetos</a></li>
+        <li><a href="{% url 'portfolio:competencias' %}">Competencias</a></li>
+        <li><a href="{% url 'portfolio:layout' %}">JavaScript</a></li>
+        <li><a href="{% url 'portfolio:blog' %}">Blog</a></li>
+            </ul>
     </nav>
 
 
@@ -88,6 +92,7 @@
         <div class="bolhas">
           <div class="cols cols0">
           </div>
+        </div>
       </section>
       <div class="copyright">
         <a style="color:#fff" href="heroPage.html">Página principal | </a><a style="color: #fff;"
@@ -115,6 +120,7 @@
       <div class="circle"></div>
       <div class="circle"></div>
       <div class="circle"></div>
+    </main>
   </div>
   <script>
     const coords = { x: 0, y: 0 };

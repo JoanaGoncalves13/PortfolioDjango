@@ -1,3 +1,7 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/styleHP.css' %}">
+
+
 <!DOCTYPE html>
 <html lang="pt">
     <head>
@@ -5,25 +9,26 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">    <script
     src="https://kit.fontawesome.com/64d58efce2.js"
-    crossorigin="anonymous"
-  ></script>    <link rel="stylesheet" href="styleHP.css">
+    crossorigin="anonymous">
+    </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <title>Portfólio Digital!</title>
 </head>
 <body>
 
-    <div class = "container">    
+    <div class = "container">
         <nav>
           <div id="data"></div>
 
             <div class="nome">Joana<b>.</b></div>
             <ul class="navItems">
-              <li><a href="heroPage.html">Página principal</a></li>
-                <li><a href="AboutMe.html">Sobre mim</a></li>
-                <li><a href="projects.html">Projetos</a></li>
-                <li><a href="PW.html">Programação Web</a></li>
-                <li><a href="webSite.html">Javascript Playground</a></li>      
-                <div class="bx bx-moon" id="darkmode"></div>         
+             <li><a href="{% url 'portfolio:home' %}">Home</a></li>
+        <li><a href="{% url 'portfolio:formacao' %}">Formação</a></li>
+        <li><a href="{% url 'portfolio:projetos' %}">Projetos</a></li>
+        <li><a href="{% url 'portfolio:competencias' %}">Competencias</a></li>
+        <li><a href="{% url 'portfolio:layout' %}">JavaScript</a></li>
+        <li><a href="{% url 'portfolio:blog' %}">Blog</a></li>
+             <div class="bx bx-moon" id="darkmode"></div>
             </ul>
         </nav>
         <div class="wrapper">
@@ -34,7 +39,6 @@
                 <div class="btns">
                     <a href="imagens/Currículo [365].pdf" download>
                     <button>Descarregar CV</button></a>
-                    <a href="contact.html">
                     <button>Vamos Conversar</button></a>
                 </div>
             </div>
@@ -47,10 +51,10 @@
                 <div class="cols cols0">
             </div>
         </div>
+        </div>
         <script>
-  
   let darkmode = document.querySelector("#darkmode");
-  
+
   darkmode.onclick = () => {
     if (darkmode.classList.contains("bx-moon")) {
       darkmode.classList.replace("bx-moon", "bx-sun");
@@ -68,7 +72,7 @@ darkModeBtn.addEventListener("click", () => {
   body.classList.toggle("invert-colors");
 });
 
-  </script>   
+  </script>
 
         <script>var dataAtual = new Date();
           var opcoesData = { day: 'numeric', month: 'long', year: 'numeric' };
@@ -81,7 +85,7 @@ darkModeBtn.addEventListener("click", () => {
                 strings:["Joana Gonçalves"],
                 loop : true,
                 typeSpeed : 100,
-                backSpeed : 80, 
+                backSpeed : 80,
                 backDelay : 1500
             })
         </script>
@@ -144,20 +148,20 @@ circles.forEach(function (circle, index) {
 window.addEventListener("mousemove", function(e){
   coords.x = e.clientX;
   coords.y = e.clientY;
-  
+
 });
 
 function animateCircles() {
-  
+
   let x = coords.x;
   let y = coords.y;
-  
+
   circles.forEach(function (circle, index) {
     circle.style.left = x - 12 + "px";
     circle.style.top = y - 12 + "px";
-    
+
     circle.style.scale = (circles.length - index) / circles.length;
-    
+
     circle.x = x;
     circle.y = y;
 
@@ -165,7 +169,7 @@ function animateCircles() {
     x += (nextCircle.x - x) * 0.3;
     y += (nextCircle.y - y) * 0.3;
   });
- 
+
   requestAnimationFrame(animateCircles);
 }
 
@@ -173,5 +177,6 @@ animateCircles();
 
 
     </script>
+    </div>
 </body>
 </html>

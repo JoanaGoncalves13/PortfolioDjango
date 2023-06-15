@@ -1,3 +1,7 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/stylePW.css' %}">
+
+
 <html lang="pt">
     <head>
       <meta charset="UTF-8">
@@ -13,11 +17,12 @@
         <nav>
             <div class="nome">Joana<b>.</b></div>
             <ul class="navItems">
-                <li><a href="heroPage.html">Página principal</a></li>
-                <li><a href="AboutMe.html">Sobre mim</a></li>
-                <li><a href="projects.html">Projetos</a></li>
-                <li><a href="PW.html">Programação Web</a></li>
-                <li><a href="webSite.html">Javascript Playground</a></li>                
+              <li><a href="{% url 'portfolio:home' %}">Home</a></li>
+        <li><a href="{% url 'portfolio:formacao' %}">Formação</a></li>
+        <li><a href="{% url 'portfolio:projetos' %}">Projetos</a></li>
+        <li><a href="{% url 'portfolio:competencias' %}">Competencias</a></li>
+        <li><a href="{% url 'portfolio:layout' %}">JavaScript</a></li>
+        <li><a href="{% url 'portfolio:blog' %}">Blog</a></li>
             </ul>
             </nav>
 
@@ -161,7 +166,9 @@
             <li>
               <a href="#">Título da Notícia 5</a> - 3 linhas de texto sobre a notícia - <a href="#">link para a notícia</a>
             </li>
-          </section>
+
+          </ul>
+    </section>
               <section>
                 <h2>Técnicas e efeitos que gosto</h2>
                 <ul>
@@ -170,7 +177,7 @@
                   <li>Lazy loading images</li>
                 </ul>
               </section>
-          
+
               <section>
                 <h2>Sites que gosto</h2>
                 <ul>
@@ -179,7 +186,7 @@
                   <li><a href="#">Site 3</a></li>
                 </ul>
               </section>
-          
+
               <section>
                 <h2>Sites que acho maus</h2>
                 <ul>
@@ -188,7 +195,7 @@
                   <li><a href="#">Site 6</a></li>
                 </ul>
               </section>
-          
+
               <section>
                 <h2>Tendências modernas de programação Web</h2>
                 <p>Algumas das tendências mais populares incluem:</p>
@@ -199,7 +206,7 @@
                   <li>Aplicações de realidade virtual e aumentada</li>
                 </ul>
               </section>
-          
+
               <section>
                 <h2>Aspectos obsoletos da programação Web</h2>
                 <p>Alguns aspectos obsoletos incluem:</p>
@@ -210,7 +217,7 @@
                 </ul>
               </section>
             </main>
-          
+
             <div class="copyright">
               <a style="color:#fff" href="heroPage.html">Página principal | </a><a style="color: #fff;" href="contact.html">Contacta-me</a> | Joana Gonçalves | 2023 | Universidade Lusófona  </div>
 
@@ -235,7 +242,8 @@
   <div class="circle"></div>
   <div class="circle"></div>
   <div class="circle"></div>
-    </div>
+  </body>
+</html></div>
     <script>
         const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
@@ -274,20 +282,20 @@ circles.forEach(function (circle, index) {
 window.addEventListener("mousemove", function(e){
   coords.x = e.clientX;
   coords.y = e.clientY;
-  
+
 });
 
 function animateCircles() {
-  
+
   let x = coords.x;
   let y = coords.y;
-  
+
   circles.forEach(function (circle, index) {
     circle.style.left = x - 12 + "px";
     circle.style.top = y - 12 + "px";
-    
+
     circle.style.scale = (circles.length - index) / circles.length;
-    
+
     circle.x = x;
     circle.y = y;
 
@@ -295,13 +303,13 @@ function animateCircles() {
     x += (nextCircle.x - x) * 0.3;
     y += (nextCircle.y - y) * 0.3;
   });
- 
+
   requestAnimationFrame(animateCircles);
 }
 
 animateCircles();
 
     </script>
-            </div> 
+            </div>
             </body>
             </html>
